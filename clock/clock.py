@@ -21,8 +21,8 @@ matrix = RGBMatrix(options = options)
 
 #start_time = time.time()
 
-jsonFile = requests.get("http://api.openweathermap.org/data/2.5/weather?q=Dresden,DE&appid=811b45480$
-jsonFileContent = jsonFile.text.decode("utf-8")
+jsonFile = requests.get("http://api.openweathermap.org/data/2.5/weather?q=Dresden,DE&appid=811b454803e4631ae80e51d40248b7e6", timeout=2)
+jsonFileContent = jsonFile.text
 jsonObject = json.loads(jsonFileContent)
 
 temperature = jsonObject['main']['temp']
@@ -53,8 +53,8 @@ while True:
 #    offscreen_canvas.Clear()
     for y in range (0, 13):
         graphics.DrawLine(offscreen_canvas,0 , y, 64, y, leer)
-    graphics.DrawText(offscreen_canvas, font3, 0, 13, textColor, time.strftime("%H:%M:%S", time.loca$
-#    graphics.DrawText(offscreen_canvas, font1, 7, 18, graphics.Color(255, 230, 200), time.strftime($
+    graphics.DrawText(offscreen_canvas, font3, 0, 13, textColor, time.strftime("%H:%M:%S", time.localtime()))
+#    graphics.DrawText(offscreen_canvas, font1, 7, 18, graphics.Color(255, 230, 200), time.strftime("%d-%m-%Y", time.localtim$
 
 #    image1 = Image.open('drop.png')
 #    matrix.SetImage(image1.convert('RGB'), 37, 20)
