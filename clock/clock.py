@@ -53,7 +53,7 @@ font3.LoadFont("/home/pi/rpi-rgb-led-matrix/fonts/8x13B.bdf")
 # Font for temp and humidity
 
 font2 = graphics.Font()
-font2.LoadFont("6x9_t.bdf")
+font2.LoadFont("/home/pi/LED-Matrix-Clock/fonts/6x9_t.bdf")
 
 textColor = graphics.Color(255, 230, 200)
 
